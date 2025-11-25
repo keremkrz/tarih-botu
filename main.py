@@ -31,7 +31,7 @@ if not bugun_olaylari.empty and random.random() < 0.8:
 else:
     secilen = df.sample(1).iloc[0]
 
-tweet = f"25 Kasım {ay_isimleri[secilen['ay']]} {secilen['yil']}\n\n{secilen['olay']}\n\n#Tarih #Bugün"
+tweet = f"25 Kasım {ay_isimleri[int(secilen['ay'])]} {secilen['yil']}\n\n{secilen['olay']}\n\n#Tarih #Bugün"
 
 try:
     client.create_tweet(text=tweet)
