@@ -21,8 +21,8 @@ bugun = datetime.now()
 gun = bugun.day
 ay = bugun.month
 
-ay_isimleri = ["", "Ocak", "Şubat", "Mart", "Nisan", "Mayıs", "Haziran",
-               "Temmuz", "Ağustos", "Eylül", "Ekim", "Kasım", "Aralık"]
+ay_adi = str(secilen['ay']).strip()
+tweet = f"25 {ay_adi} {secilen['yil']}\n\n{secilen['olay']}\n\n#Tarih #Bugün"
 
 bugun_olaylari = df[(df['gun'] == gun) & (df['ay'] == ay)]
 
